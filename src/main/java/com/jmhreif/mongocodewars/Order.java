@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -26,5 +27,5 @@ public class Order {
     @Field("Shipping")
     private Shipping shipping;
     @Field("Products")
-    private Set<OrderedProduct> orderedProducts = new HashSet<>();
+    private List<Product> products;
 }

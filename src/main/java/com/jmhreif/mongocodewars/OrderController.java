@@ -14,11 +14,11 @@ public class OrderController {
     @GetMapping
     public Iterable<Order> findAllOrders() { return orderRepo.findAll(); }
 
-    @GetMapping("/findorderbyid")
+    @GetMapping("/findbyid")
     public Order findByOrderId(Long orderId) {
-        return orderRepo.findOrderByOrderId(orderId);
+        return orderRepo.findByOrderId(orderId);
     }
 
-    @GetMapping("/findordersbyproduct")
-    public Iterable<Order> findOrdersByOrderedProductsContaining(String productName) { return orderRepo.findOrdersByOrderedProductsContaining(productName); }
+    @GetMapping("/findbyproduct")
+    public Iterable<Order> findByProductName(String productName) { return orderRepo.findByProductName(productName); }
 }

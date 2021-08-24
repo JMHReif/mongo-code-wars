@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderedProduct {
-    private Integer productId;
+public class Product {
+    private Long productId;
 
     private String productName;
     private double unitPrice;

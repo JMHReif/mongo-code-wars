@@ -5,8 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface OrderRepo extends CrudRepository<Order, Long> {
 
-    Order findOrderByOrderId(Long orderId);
+    Order findByOrderId(Long orderId);
 
-    @Query("{ 'orderedProducts.productName' : { $regex: ?0, $options: 'i' } }")
-    Iterable<Order> findOrdersByOrderedProductsContaining(String productName);
+    @Query("{ 'products.productName' : { $regex: ?0, $options: 'i' } }")
+    Iterable<Order> findByProductName(String productName);
 }
