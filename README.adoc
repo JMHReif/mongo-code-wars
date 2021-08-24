@@ -2,7 +2,7 @@
 
 This repository accompanies the repositories listed below to connect to MongoDB running in a Docker container and query Northwind sales domain data in the database.
 
-* https://github.com/JMHReif/docker-mongo[Docker container for MariaDB^]
+* https://github.com/JMHReif/docker-mongo[Docker container for MongoDB^]
 * https://github.com/JMHReif/code-wars-import-data-scripts[Northwind data set load scripts^]
 
 == REST endpoints
