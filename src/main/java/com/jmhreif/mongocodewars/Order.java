@@ -9,9 +9,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -22,10 +20,8 @@ public class Order {
     public ObjectId _id;
     @NonNull
     private Long orderId;
-    private String orderDate, requiredDate;
+    private String orderDate;
 
-    @Field("Shipping")
-    private Shipping shipping;
     @Field("Products")
     private List<Product> products;
 }
