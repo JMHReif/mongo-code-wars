@@ -5,9 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
 
@@ -16,7 +16,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Document
 public class Order {
-    @Id @NonNull
+    @MongoId
+    @NonNull
     public ObjectId _id;
     @NonNull
     private Long orderId;
